@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="p-10 font-extrabold border-b-2 border-white">
+        <nav className="p-5 md:p-10 font-extrabold border-b-2 border-white">
           <Link href="/">SPACE X DATA</Link>
         </nav>
         {children}

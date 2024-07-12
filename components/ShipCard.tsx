@@ -2,14 +2,12 @@ import React from "react";
 import { Meteors } from "./meteors";
 import Link from "next/link";
 import { ShipData } from "@/utils/types";
-
-export function ShipCard({
-  shipData,
-  allDetails,
-}: {
+interface ShipCardProps {
   shipData: ShipData;
   allDetails?: boolean;
-}) {
+}
+
+export const ShipCard: React.FC<ShipCardProps> = ({ shipData, allDetails }) => {
   return (
     <div className="flex items-center justify-center">
       <div className="w-full relative">

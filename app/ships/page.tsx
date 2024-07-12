@@ -1,5 +1,6 @@
 import MoreShips from "@/components/MoreShips";
 import { fetchShips } from "@/utils/api";
+import { FetchShipsResponse } from "@/utils/types";
 
 export default async function Ships({
   searchParams,
@@ -9,7 +10,7 @@ export default async function Ships({
 
 
   const limit = 12;
-  const ships = await fetchShips({ limit: limit }); //Fetch initial ships and pass to moreships component for infinite scroll
+  const ships: FetchShipsResponse = await fetchShips({ limit: limit }); //Fetch initial ships and pass to moreships component for infinite scroll
 
   return (
     <main className="flex flex-col gap-10 p-10 min-h-screen w-full">

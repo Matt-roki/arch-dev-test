@@ -29,7 +29,7 @@ const MoreShips = ({limit, initialShips}: {limit: number, initialShips: ShipData
 
     return(
         <div>
-            <div className="grid grid-cols-3 justify-between items-center gap-5 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 justify-between items-center gap-5 w-full">
                 {ships.map((shipData: ShipData, index: number) => (
                     <ShipCard shipData={shipData} key={index} />
                 ))}
